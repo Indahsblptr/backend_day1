@@ -117,4 +117,13 @@ exports.addUsers =  async (req, res) => {
     await user.create(req.body);
 
     res.send({
-      message: 'Inse
+      message: 'Insert data user with ORM finished'
+    });
+  } catch (error){
+    console.log(error);
+    res.send({
+      status: 'failed',
+      message: 'Server Error',
+    });
+  }
+};
